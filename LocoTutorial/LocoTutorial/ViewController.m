@@ -102,6 +102,7 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * _Nonnull action) {
+                                                   [[BCLManager sharedManager] addEventLog:@"Open" value:page];
                                                    [self performSegueWithIdentifier:@"toWebView" sender:page];
                                                }];
     
