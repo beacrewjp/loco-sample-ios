@@ -7,7 +7,6 @@
 //
 
 #import "ManagerViewController.h"
-@import UserNotifications;
 
 @interface ManagerViewController ()
 
@@ -171,7 +170,7 @@
     [ac addAction:[UIAlertAction actionWithTitle:@"Regions"
                                            style:UIAlertActionStyleDefault
                                          handler:^(UIAlertAction *action) {
-                                             NSMutableString *mstr = [logText.text mutableCopy];
+                                             NSMutableString *mstr = [NSMutableString string];
                                              [mstr appendString:@"[Regions]\n"];
                                              NSMutableArray *marray = [NSMutableArray array];
                                              NSArray *regions = [[BCLManager sharedManager] getRegions];
@@ -188,7 +187,7 @@
     [ac addAction:[UIAlertAction actionWithTitle:@"Actions"
                                            style:UIAlertActionStyleDefault
                                          handler:^(UIAlertAction *action) {
-                                             NSMutableString *mstr = [logText.text mutableCopy];
+                                             NSMutableString *mstr = [NSMutableString string];
                                              [mstr appendString:@"[Actions]\n"];
                                              NSMutableArray *marray = [NSMutableArray array];
                                              NSArray *actions = [[BCLManager sharedManager] getActions];
@@ -201,6 +200,11 @@
                                              mdic[@"actions"] = marray;
                                              [mstr appendString:[self makeJSONStringFromDictionary:mdic]];
                                              [self addLogText:mstr color:[UIColor whiteColor]];
+                                         }]];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Add Event Log"
+                                           style:UIAlertActionStyleDefault
+                                         handler:^(UIAlertAction *action) {
+                                             [self showEventLogDialog];
                                          }]];
     [ac addAction:[UIAlertAction actionWithTitle:@"Cancel"
                                            style:UIAlertActionStyleCancel
@@ -259,9 +263,6 @@
         [mstr appendString:[self currentTime]];
         [mstr appendString:@" [RegionIn]    "];
         [mstr appendString:region.name];
-
-        [self buildNotification:[mstr copy]];
-
         [self addLogText:mstr color:[UIColor greenColor]];
     });
 }
@@ -273,9 +274,6 @@
         [mstr appendString:[self currentTime]];
         [mstr appendString:@" [RegionOut]    "];
         [mstr appendString:region.name];
-
-        [self buildNotification:[mstr copy]];
-
         [self addLogText:mstr color:[UIColor blueColor]];
     });
 }
@@ -287,9 +285,6 @@
         [mstr appendString:[self currentTime]];
         [mstr appendString:@" [Action]    "];
         [mstr appendString:action.name];
-        
-        [[BCLManager sharedManager] addEventLog:@"LocoTester" value:[mstr copy]];
-        
         [self addLogText:mstr color:[UIColor yellowColor]];
     });
 }
@@ -307,6 +302,41 @@
 
 #pragma mark - private method
 
+- (void)showEventLogDialog {
+    
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Add Event Log"
+                                                                message:nil
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+    
+    [ac addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"key";
+    }];
+    [ac addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"value";
+    }];
+
+    [ac addAction:[UIAlertAction actionWithTitle:@"OK"
+                                           style:UIAlertActionStyleDefault
+                                         handler:^(UIAlertAction *action) {
+                                             NSString *key = ac.textFields[0].text;
+                                             NSString *value = ac.textFields[1].text;
+                                             if (key.length > 0 && value.length > 0) {
+                                                 [[BCLManager sharedManager] addEventLog:key value:value];
+                                                 NSMutableString *mstr = [NSMutableString string];
+                                                 [mstr appendString:@"[Add Event Log]\n"];
+                                                 [mstr appendString:[NSString stringWithFormat:@"key : %@\n", key]];
+                                                 [mstr appendString:[NSString stringWithFormat:@"value : %@", value]];
+                                                 [self addLogText:mstr color:[UIColor whiteColor]];
+                                             }
+                                         }]];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                           style:UIAlertActionStyleCancel
+                                         handler:^(UIAlertAction *action){
+                                         }]];
+
+    [self presentViewController:ac animated:YES completion:nil];
+}
+
 - (NSString *)currentTime {
     NSDateFormatter *readableDateFormat = [[NSDateFormatter alloc] init];
     [readableDateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss "];
@@ -322,25 +352,6 @@
     [attributedText appendAttributedString:astr];
     logText.attributedText = attributedText;
     [logText scrollRangeToVisible:NSMakeRange(logText.text.length - 1, 1)];
-}
-
-- (void)buildNotification:(NSString *)text {
-  UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-    content.body = text;
-    content.sound = [UNNotificationSound defaultSound];
-    
-    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:[NSUUID UUID].UUIDString
-                                                                          content:content
-                                                                          trigger:nil];
-    
-    UNUserNotificationCenter *currentCenter = [UNUserNotificationCenter currentNotificationCenter];
-    
-    [currentCenter addNotificationRequest:request
-                    withCompletionHandler:^(NSError * _Nullable error) {
-                        if (error) {
-                            NSLog(@"Notification Error:%@", error.localizedDescription);
-                        }
-                    }];
 }
 
 - (NSDictionary *)beaconToDictionary:(BCLBeacon *)beacon {

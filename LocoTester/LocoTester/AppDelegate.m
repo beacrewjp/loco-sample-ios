@@ -16,13 +16,6 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    // 通知の許可を得る
-    UNUserNotificationCenter *notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
-    notificationCenter.delegate = self;
-    [notificationCenter requestAuthorizationWithOptions:UNAuthorizationOptionSound|UNAuthorizationOptionAlert
-                                      completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                                      }];
-    
     // SDK SECRETをUserDefaultsに保存
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud registerDefaults:@{@"SDK_SECRET": kSDKSecret}];

@@ -66,7 +66,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" title="Menu" image="baseline_menu_black_18dp.png"/>
                                                 <connections>
-                                                    <segue destination="XUc-sO-MWS" kind="show" id="EAN-So-eWg"/>
+                                                    <segue destination="XUc-sO-MWS" kind="show" animates="NO" id="EAN-So-eWg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3b-pR-0fL">
@@ -91,7 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="indicator" destination="qDT-BS-qdO" id="cPW-2x-j3O"/>
-                        <segue destination="7x3-kI-9pD" kind="presentation" identifier="toWebView" id="TMD-gX-tuP"/>
+                        <segue destination="7x3-kI-9pD" kind="presentation" identifier="toWebView" animates="NO" id="TMD-gX-tuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,7 +135,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" title="Menu" image="baseline_menu_black_18dp.png"/>
                                                 <connections>
-                                                    <segue destination="XUc-sO-MWS" kind="show" id="BWn-2w-pg2"/>
+                                                    <segue destination="XUc-sO-MWS" kind="show" animates="NO" id="BWn-2w-pg2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -212,6 +212,9 @@
                                                 <rect key="frame" x="331" y="8" width="36" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                 <state key="normal" title="Menu" image="baseline_menu_black_18dp.png"/>
+                                                <connections>
+                                                    <action selector="tapHomeButton:" destination="XUc-sO-MWS" eventType="touchUpInside" id="VQz-V7-AM9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcT-4m-fAa">
                                                 <rect key="frame" x="8" y="8" width="36" height="36"/>
@@ -247,6 +250,6 @@
         <image name="baseline_menu_black_18dp.png" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EAN-So-eWg"/>
+        <segue reference="BWn-2w-pg2"/>
     </inferredMetricsTieBreakers>
 </document>

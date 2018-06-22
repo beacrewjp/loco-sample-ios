@@ -23,7 +23,7 @@
 }
 
 - (IBAction)tapHomeButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

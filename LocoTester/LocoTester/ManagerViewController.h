@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-
 #import <BeacrewLoco/BeacrewLoco.h>
 
 @interface ManagerViewController : UIViewController <BCLManagerDelegate>

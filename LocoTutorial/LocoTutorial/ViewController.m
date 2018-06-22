@@ -72,7 +72,7 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
         if ([param.key isEqualToString:@"page"]) {
             if (self.presentedViewController) {
                 if ([self.presentedViewController isEqual:self.alert]) {
-                    [self.alert dismissViewControllerAnimated:YES completion:^{
+                    [self.alert dismissViewControllerAnimated:NO completion:^{
                         [self showDialog:param.value];
                     }];
                 }
