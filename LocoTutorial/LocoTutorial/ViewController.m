@@ -47,48 +47,35 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
 
 #pragma mark - BCLManagerDelegate Methods
 
-- (void)didChangeInitStatus:(BCLInitState)status {
-    NSString *stateString = @"";
-    switch (status) {
-        case BCLInitStateInitializing:
-            stateString = @"Initializing";
-            break;
-        case BCLInitStateReady:
-            stateString = @"Ready";
-            break;
-        case BCLInitStateError:
-            stateString = @"Error";
-            break;
-        default:
-            stateString = @"Unknown";
-            break;
-    }
-    NSLog(@"%s:%@", __FUNCTION__, stateString);
-}
-
 - (void)didActionCalled:(BCLAction *)action {
 
+    NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
     for (BCLParam *param in action.params) {
-        if ([param.key isEqualToString:@"page"]) {
-            if (self.presentedViewController) {
-                if ([self.presentedViewController isEqual:self.alert]) {
-                    [self.alert dismissViewControllerAnimated:NO completion:^{
-                        [self showDialog:param.value];
-                    }];
-                }
-            } else {
-                [self showDialog:param.value];
-            }
-        }
+        [mdic setObject:param.value forKey:param.key];
     }
-}
 
-- (void)didEnterRegion:(BCLRegion *)region {
+    NSString *type = mdic[@"type"];
     
-    NSMutableString *message = [NSMutableString string];
-    [message appendString:region.name];
-    [message appendString:@"へチェックインしました。"];
-    [self pushMessage:message];
+    if ([type isEqualToString:@"web"]) {
+        
+        NSString *page = mdic[@"page"];
+        
+        if (self.presentedViewController) {
+            if ([self.presentedViewController isEqual:self.alert]) {
+                [self.alert dismissViewControllerAnimated:NO completion:^{
+                    [self showDialog:page];
+                }];
+            }
+        } else {
+            [self showDialog:page];
+        }
+
+    } else if ([type isEqualToString:@"push"]) {
+        
+        NSString *message = mdic[@"message"];
+        
+        [self pushMessage:message];
+    }
 }
 
 #pragma mark - Private Methods
@@ -134,6 +121,5 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
                         }
                     }];
 }
-
 
 @end
