@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D12105270D85377BE0AACAC /* Pods_LocoTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C478A4939BFF2A501BFE6DF /* Pods_LocoTester.framework */; };
-		D6533AFF20C6698200CF2366 /* ic_lock_open_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D6533AFA20C6698200CF2366 /* ic_lock_open_black_24dp.png */; };
-		D6533B0020C6698200CF2366 /* ic_power_settings_new_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D6533AFB20C6698200CF2366 /* ic_power_settings_new_black_24dp.png */; };
-		D6533B0120C6698200CF2366 /* ic_info_outline_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D6533AFC20C6698200CF2366 /* ic_info_outline_black_24dp.png */; };
-		D6533B0220C6698200CF2366 /* ic_stop_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D6533AFD20C6698200CF2366 /* ic_stop_black_24dp.png */; };
-		D6533B0320C6698200CF2366 /* ic_play_arrow_black_24dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D6533AFE20C6698200CF2366 /* ic_play_arrow_black_24dp.png */; };
 		D6B933311E49C58200C4B04A /* ManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B933301E49C58200C4B04A /* ManagerViewController.m */; };
+		D6E45E9221412A0300448501 /* SimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E45E9121412A0300448501 /* SimulatorViewController.m */; };
 		D6E7623A1E4344FD001B0EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E762391E4344FD001B0EBA /* main.m */; };
 		D6E7623D1E4344FD001B0EBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E7623C1E4344FD001B0EBA /* AppDelegate.m */; };
 		D6E762431E4344FD001B0EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E762411E4344FD001B0EBA /* Main.storyboard */; };
@@ -25,13 +21,10 @@
 		5C478A4939BFF2A501BFE6DF /* Pods_LocoTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocoTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFC844674351C8E45D7A1EE /* Pods-LocoTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester.release.xcconfig"; sourceTree = "<group>"; };
 		BB4D4A7B9AB341425530F723 /* Pods-LocoTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester.debug.xcconfig"; sourceTree = "<group>"; };
-		D6533AFA20C6698200CF2366 /* ic_lock_open_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_lock_open_black_24dp.png; sourceTree = "<group>"; };
-		D6533AFB20C6698200CF2366 /* ic_power_settings_new_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_power_settings_new_black_24dp.png; sourceTree = "<group>"; };
-		D6533AFC20C6698200CF2366 /* ic_info_outline_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_outline_black_24dp.png; sourceTree = "<group>"; };
-		D6533AFD20C6698200CF2366 /* ic_stop_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_stop_black_24dp.png; sourceTree = "<group>"; };
-		D6533AFE20C6698200CF2366 /* ic_play_arrow_black_24dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_play_arrow_black_24dp.png; sourceTree = "<group>"; };
 		D6B9332F1E49C58200C4B04A /* ManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerViewController.h; sourceTree = "<group>"; };
 		D6B933301E49C58200C4B04A /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerViewController.m; sourceTree = "<group>"; };
+		D6E45E9021412A0300448501 /* SimulatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorViewController.h; sourceTree = "<group>"; };
+		D6E45E9121412A0300448501 /* SimulatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorViewController.m; sourceTree = "<group>"; };
 		D6E762351E4344FD001B0EBA /* LocoTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocoTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E762391E4344FD001B0EBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6E7623B1E4344FD001B0EBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,22 +55,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D6533AF920C6698200CF2366 /* image */ = {
-			isa = PBXGroup;
-			children = (
-				D6533AFA20C6698200CF2366 /* ic_lock_open_black_24dp.png */,
-				D6533AFB20C6698200CF2366 /* ic_power_settings_new_black_24dp.png */,
-				D6533AFC20C6698200CF2366 /* ic_info_outline_black_24dp.png */,
-				D6533AFD20C6698200CF2366 /* ic_stop_black_24dp.png */,
-				D6533AFE20C6698200CF2366 /* ic_play_arrow_black_24dp.png */,
-			);
-			path = image;
-			sourceTree = "<group>";
-		};
 		D6E7622C1E4344FD001B0EBA = {
 			isa = PBXGroup;
 			children = (
-				D6533AF920C6698200CF2366 /* image */,
 				D6E762371E4344FD001B0EBA /* LocoTester */,
 				D6E762361E4344FD001B0EBA /* Products */,
 				FF38EE9A6EE664AA29B47F09 /* Pods */,
@@ -100,6 +80,8 @@
 				D6E7623C1E4344FD001B0EBA /* AppDelegate.m */,
 				D6B9332F1E49C58200C4B04A /* ManagerViewController.h */,
 				D6B933301E49C58200C4B04A /* ManagerViewController.m */,
+				D6E45E9021412A0300448501 /* SimulatorViewController.h */,
+				D6E45E9121412A0300448501 /* SimulatorViewController.m */,
 				D6E762461E4344FD001B0EBA /* LaunchScreen.storyboard */,
 				D6E762411E4344FD001B0EBA /* Main.storyboard */,
 				D6E762441E4344FD001B0EBA /* Assets.xcassets */,
@@ -188,14 +170,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6533AFF20C6698200CF2366 /* ic_lock_open_black_24dp.png in Resources */,
-				D6533B0020C6698200CF2366 /* ic_power_settings_new_black_24dp.png in Resources */,
 				D6E762481E4344FD001B0EBA /* LaunchScreen.storyboard in Resources */,
-				D6533B0220C6698200CF2366 /* ic_stop_black_24dp.png in Resources */,
 				D6E762451E4344FD001B0EBA /* Assets.xcassets in Resources */,
-				D6533B0120C6698200CF2366 /* ic_info_outline_black_24dp.png in Resources */,
 				D6E762431E4344FD001B0EBA /* Main.storyboard in Resources */,
-				D6533B0320C6698200CF2366 /* ic_play_arrow_black_24dp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +219,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester-frameworks.sh",
-				"${PODS_ROOT}/BeacrewLoco/v2_1_0/sdk/BeacrewLoco/BeacrewLoco.framework",
+				"${PODS_ROOT}/BeacrewLoco/v2_2_0/sdk/BeacrewLoco/BeacrewLoco.framework",
 				"${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
@@ -267,6 +244,7 @@
 				D6B933311E49C58200C4B04A /* ManagerViewController.m in Sources */,
 				D6E7623D1E4344FD001B0EBA /* AppDelegate.m in Sources */,
 				D6E7623A1E4344FD001B0EBA /* main.m in Sources */,
+				D6E45E9221412A0300448501 /* SimulatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB4D4A7B9AB341425530F723 /* Pods-LocoTester.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XBPCNZ2WRU;
 				INFOPLIST_FILE = "$(SRCROOT)/LocoTester/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAFC844674351C8E45D7A1EE /* Pods-LocoTester.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XBPCNZ2WRU;
 				INFOPLIST_FILE = "$(SRCROOT)/LocoTester/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
