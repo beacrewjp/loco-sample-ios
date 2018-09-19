@@ -11,18 +11,11 @@
 
 @implementation AppDelegate
 
-// SDK SECRETの初期値をセット
-static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    // SDK SECRETをUserDefaultsに保存
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud registerDefaults:@{@"SDK_SECRET": kSDKSecret}];
-
+    
     // MQTTのログレベルを設定
     [MQTTLog setLogLevel:DDLogLevelWarning];
-
+    
     return YES;
 }
 

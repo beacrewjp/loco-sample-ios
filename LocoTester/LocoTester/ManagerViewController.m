@@ -13,24 +13,19 @@
 @end
 
 @implementation ManagerViewController {
-    __weak IBOutlet UILabel *appName;
     __weak IBOutlet UITextView *logText;
 }
 
-- (void)viewDidLoad {
-    NSLog(@"%s", __FUNCTION__);
-    [super viewDidLoad];
+// 発行されたSDK SECRETをセット
+static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
     [BCLManager sharedManager].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    NSLog(@"%s", __FUNCTION__);
-    [super viewDidDisappear:animated];
 }
 
 #pragma mark - Rotate Event
@@ -49,41 +44,14 @@
 
 #pragma mark - IBAction Delegate
 
-- (IBAction)tapKey:(UIButton *)button {
-
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *secretKey = [ud stringForKey:@"SDK_SECRET"];
-    
-    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"SECRET KEY"
-                                                                message:nil
-                                                         preferredStyle:UIAlertControllerStyleAlert];
-    
-    [ac addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.text = secretKey;
-    }];
-
-    [ac addAction:[UIAlertAction actionWithTitle:@"OK"
-                                           style:UIAlertActionStyleDefault
-                                         handler:^(UIAlertAction *action) {
-                                             UITextField *textField = ac.textFields.firstObject;
-                                             [ud setObject:textField.text forKey:@"SDK_SECRET"];
-                                             [ud synchronize];
-                                         }]];
-    
-    [self presentViewController:ac animated:YES completion:nil];
-}
-
 - (IBAction)tapInit:(UIButton *)button {
 
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *secretKey = [ud stringForKey:@"SDK_SECRET"];
-
-    if (secretKey && secretKey.length > 0) {
+    if ([kSDKSecret isEqualToString:@"<ENTER YOUR SDK SECRET>"] == NO) {
         BCLManager *manager = [BCLManager sharedManager];
-        [manager initWithApiKey:secretKey autoScan:NO];
+        [manager initWithApiKey:kSDKSecret autoScan:NO];
     } else {
         UIAlertController *ac = [UIAlertController alertControllerWithTitle:nil
-                                                                    message:@"KEYが入力されていません"
+                                                                    message:@"SDK SECRETが設定されていません"
                                                              preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
                                                      style:UIAlertActionStyleDefault
@@ -218,16 +186,22 @@
 
 #pragma mark - BCLManagerDelegate
 
-- (void)didChangeInitStatus:(BCLInitState)status {
+- (void)didChangeStatus:(BCLState)status {
     NSString *stateString = @"";
     switch (status) {
-        case BCLInitStateInitializing:
+        case BCLStateUninitialized:
+            stateString = @"Uninitialized";
+            break;
+        case BCLStateInitializing:
             stateString = @"Initializing";
             break;
-        case BCLInitStateReady:
+        case BCLStateReady:
             stateString = @"Ready";
             break;
-        case BCLInitStateError:
+        case BCLStateScanning:
+            stateString = @"Scanning";
+            break;
+        case BCLStateError:
             stateString = @"Error";
             break;
         default:
@@ -278,7 +252,7 @@
     });
 }
 
-- (void)didActionCalled:(BCLAction *)action {
+- (void)didActionCalled:(BCLAction *)action type:(NSString *)type source:(id)source {
     NSLog(@"%s", __FUNCTION__);
     dispatch_async(dispatch_get_main_queue(), ^{
         NSMutableString *mstr = [NSMutableString string];
