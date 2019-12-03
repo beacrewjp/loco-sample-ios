@@ -20,7 +20,7 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSBluetoothPeripheralUsageDescription</key>
+	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>ビーコンの電池レベル取得に使用します。</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>ビーコンの検知に使用します。</string>

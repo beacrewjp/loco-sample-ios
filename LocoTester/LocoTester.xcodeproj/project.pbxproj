@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D12105270D85377BE0AACAC /* Pods_LocoTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C478A4939BFF2A501BFE6DF /* Pods_LocoTester.framework */; };
+		B29B666188922BC5BD55707A /* Pods_LocoTester.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1561107E818A0C7C1B064A3F /* Pods_LocoTester.framework */; };
 		D6B933311E49C58200C4B04A /* ManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B933301E49C58200C4B04A /* ManagerViewController.m */; };
 		D6E45E9221412A0300448501 /* SimulatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E45E9121412A0300448501 /* SimulatorViewController.m */; };
 		D6E7623A1E4344FD001B0EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E762391E4344FD001B0EBA /* main.m */; };
@@ -18,9 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C478A4939BFF2A501BFE6DF /* Pods_LocoTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocoTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAFC844674351C8E45D7A1EE /* Pods-LocoTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester.release.xcconfig"; sourceTree = "<group>"; };
-		BB4D4A7B9AB341425530F723 /* Pods-LocoTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester.debug.xcconfig"; sourceTree = "<group>"; };
+		1561107E818A0C7C1B064A3F /* Pods_LocoTester.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocoTester.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD208CD8A98DEE7429AE6D9 /* Pods-LocoTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.release.xcconfig"; path = "Target Support Files/Pods-LocoTester/Pods-LocoTester.release.xcconfig"; sourceTree = "<group>"; };
+		B420B5378CC88D01950437F7 /* Pods-LocoTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTester.debug.xcconfig"; path = "Target Support Files/Pods-LocoTester/Pods-LocoTester.debug.xcconfig"; sourceTree = "<group>"; };
 		D6B9332F1E49C58200C4B04A /* ManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerViewController.h; sourceTree = "<group>"; };
 		D6B933301E49C58200C4B04A /* ManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerViewController.m; sourceTree = "<group>"; };
 		D6E45E9021412A0300448501 /* SimulatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorViewController.h; sourceTree = "<group>"; };
@@ -40,19 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D12105270D85377BE0AACAC /* Pods_LocoTester.framework in Frameworks */,
+				B29B666188922BC5BD55707A /* Pods_LocoTester.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		89589E2D4C39D4F6742D0492 /* Frameworks */ = {
+		8157F67831AB4F7ED3CF84F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C478A4939BFF2A501BFE6DF /* Pods_LocoTester.framework */,
+				1561107E818A0C7C1B064A3F /* Pods_LocoTester.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91E7906E9977BD5C084AA252 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B420B5378CC88D01950437F7 /* Pods-LocoTester.debug.xcconfig */,
+				AFD208CD8A98DEE7429AE6D9 /* Pods-LocoTester.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D6E7622C1E4344FD001B0EBA = {
@@ -60,8 +70,8 @@
 			children = (
 				D6E762371E4344FD001B0EBA /* LocoTester */,
 				D6E762361E4344FD001B0EBA /* Products */,
-				FF38EE9A6EE664AA29B47F09 /* Pods */,
-				89589E2D4C39D4F6742D0492 /* Frameworks */,
+				91E7906E9977BD5C084AA252 /* Pods */,
+				8157F67831AB4F7ED3CF84F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,15 +109,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FF38EE9A6EE664AA29B47F09 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BB4D4A7B9AB341425530F723 /* Pods-LocoTester.debug.xcconfig */,
-				BAFC844674351C8E45D7A1EE /* Pods-LocoTester.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,12 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6E762621E4344FE001B0EBA /* Build configuration list for PBXNativeTarget "LocoTester" */;
 			buildPhases = (
-				08F2594243C434E17B0CFBF8 /* [CP] Check Pods Manifest.lock */,
+				521144051B40E36EED3763C3 /* [CP] Check Pods Manifest.lock */,
 				D6E762311E4344FD001B0EBA /* Sources */,
 				D6E762321E4344FD001B0EBA /* Frameworks */,
 				D6E762331E4344FD001B0EBA /* Resources */,
-				891E6C5AAA96BD1E5D4CD5E9 /* [CP] Embed Pods Frameworks */,
-				528DE67B9DD3C73073C05329 /* [CP] Copy Pods Resources */,
+				98455C27D4EB3E64FCA096B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,16 +179,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08F2594243C434E17B0CFBF8 /* [CP] Check Pods Manifest.lock */ = {
+		521144051B40E36EED3763C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LocoTester-checkManifestLockResult.txt",
 			);
@@ -197,29 +201,14 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		528DE67B9DD3C73073C05329 /* [CP] Copy Pods Resources */ = {
+		98455C27D4EB3E64FCA096B8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		891E6C5AAA96BD1E5D4CD5E9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester-frameworks.sh",
-				"${PODS_ROOT}/BeacrewLoco/v2_2_0/sdk/BeacrewLoco/BeacrewLoco.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LocoTester/Pods-LocoTester-frameworks.sh",
+				"${PODS_ROOT}/BeacrewLoco/v2_4_0/sdk/BeacrewLoco/BeacrewLoco.framework",
 				"${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 			);
@@ -231,7 +220,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocoTester/Pods-LocoTester-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocoTester/Pods-LocoTester-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -379,7 +368,7 @@
 		};
 		D6E762631E4344FE001B0EBA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB4D4A7B9AB341425530F723 /* Pods-LocoTester.debug.xcconfig */;
+			baseConfigurationReference = B420B5378CC88D01950437F7 /* Pods-LocoTester.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XBPCNZ2WRU;
@@ -392,7 +381,7 @@
 		};
 		D6E762641E4344FE001B0EBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAFC844674351C8E45D7A1EE /* Pods-LocoTester.release.xcconfig */;
+			baseConfigurationReference = AFD208CD8A98DEE7429AE6D9 /* Pods-LocoTester.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XBPCNZ2WRU;
