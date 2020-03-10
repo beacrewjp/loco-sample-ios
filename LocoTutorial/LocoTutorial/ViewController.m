@@ -24,7 +24,7 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
 
     self.alert = nil;
     
-    CGAffineTransform transform = CGAffineTransformMakeScale(5.0f, 5.0f);
+    CGAffineTransform transform = CGAffineTransformMakeScale(3.0f, 3.0f);
     self.indicator.transform = transform;
     [self.indicator startAnimating];
     
@@ -47,30 +47,34 @@ static NSString *kSDKSecret = @"<ENTER YOUR SDK SECRET>";
 
 #pragma mark - BCLManagerDelegate Methods
 
-- (void)didActionCalled:(BCLAction *)action {
+- (void)didActionCalled:(BCLAction *)action type:(NSString *)type source:(id)source {
 
     NSMutableDictionary *mdic = [NSMutableDictionary dictionary];
     for (BCLParam *param in action.params) {
         [mdic setObject:param.value forKey:param.key];
     }
 
-    NSString *type = mdic[@"type"];
+    NSString *actionType = mdic[@"type"];
     
-    if ([type isEqualToString:@"web"]) {
+    if ([actionType isEqualToString:@"web"]) {
         
         NSString *page = mdic[@"page"];
         
-        if (self.presentedViewController) {
-            if ([self.presentedViewController isEqual:self.alert]) {
-                [self.alert dismissViewControllerAnimated:NO completion:^{
-                    [self showDialog:page];
-                }];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (self.presentedViewController) {
+                if ([self.presentedViewController isEqual:self.alert]) {
+                    [self.alert dismissViewControllerAnimated:NO completion:^{
+                        [self showDialog:page];
+                    }];
+                }
+            } else {
+                [self showDialog:page];
             }
-        } else {
-            [self showDialog:page];
-        }
+            
+        });
 
-    } else if ([type isEqualToString:@"push"]) {
+    } else if ([actionType isEqualToString:@"push"]) {
         
         NSString *message = mdic[@"message"];
         

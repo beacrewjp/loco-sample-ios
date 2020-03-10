@@ -1,21 +1,21 @@
 PODS:
-  - BeacrewLoco (2.4.0)
-  - MQTTClient (0.14.0):
-    - MQTTClient/Core (= 0.14.0)
-  - MQTTClient/Core (0.14.0):
+  - BeacrewLoco (2.5.1)
+  - MQTTClient (0.15.3):
+    - MQTTClient/Core (= 0.15.3)
+  - MQTTClient/Core (0.15.3):
     - MQTTClient/Manager
     - MQTTClient/Min
-  - MQTTClient/Manager (0.14.0):
+  - MQTTClient/Manager (0.15.3):
     - MQTTClient/Min
-  - MQTTClient/Min (0.14.0)
+  - MQTTClient/Min (0.15.3)
   - OpenSSL-Universal (1.0.2.13)
   - Realm (2.10.2):
     - Realm/Headers (= 2.10.2)
   - Realm/Headers (2.10.2)
 
 DEPENDENCIES:
-  - BeacrewLoco (= 2.4.0)
-  - MQTTClient (= 0.14.0)
+  - BeacrewLoco (= 2.5.1)
+  - MQTTClient (= 0.15.3)
   - OpenSSL-Universal (= 1.0.2.13)
   - Realm (= 2.10.2)
 
@@ -27,11 +27,11 @@ SPEC REPOS:
     - Realm
 
 SPEC CHECKSUMS:
-  BeacrewLoco: 15999193bce334198a928ba4e5cacf629a7b5412
-  MQTTClient: eea2eaaa6ddef852a1019a4dda091e22ad928b58
+  BeacrewLoco: d5152804d2df7f4919ad76f5f0eac1beca7e9280
+  MQTTClient: 0dfa04e789479c2e461786464969895c1fcb0875
   OpenSSL-Universal: 401888162f11c33ebbd46f782d9229da35c61327
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
 
-PODFILE CHECKSUM: 6325914c54a52dab71ec23cf57a36c53daf67c7a
+PODFILE CHECKSUM: 6ca25976cbb984a855b8ae48442453f066ed2124
 
 COCOAPODS: 1.8.4

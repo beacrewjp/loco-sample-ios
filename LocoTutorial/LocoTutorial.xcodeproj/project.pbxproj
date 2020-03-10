@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B980D5FFC402CE605167593 /* Pods_LocoTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1935358E4C1C9E4BF0FFCA62 /* Pods_LocoTutorial.framework */; };
+		3F8B681FC12AF80F94734692 /* Pods_LocoTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A8D542CACFBF70EA2DDDA /* Pods_LocoTutorial.framework */; };
 		D62DB1C120CFD703000BECCF /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62DB1C020CFD703000BECCF /* WebViewController.m */; };
 		D62DB1C620D0C1D0000BECCF /* baseline_home_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D62DB1C320D0C1D0000BECCF /* baseline_home_black_18dp.png */; };
 		D62DB1C720D0C1D0000BECCF /* baseline_menu_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = D62DB1C420D0C1D0000BECCF /* baseline_menu_black_18dp.png */; };
@@ -23,9 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1935358E4C1C9E4BF0FFCA62 /* Pods_LocoTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocoTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		594C07A343AD0B0079F35302 /* Pods-LocoTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTutorial.debug.xcconfig"; path = "Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial.debug.xcconfig"; sourceTree = "<group>"; };
-		73E5418A3657026B6D8F9B39 /* Pods-LocoTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTutorial.release.xcconfig"; path = "Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		320A8D542CACFBF70EA2DDDA /* Pods_LocoTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocoTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D511138B6EE15893B69103 /* Pods-LocoTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTutorial.debug.xcconfig"; path = "Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		90333F9B86E2FE52D7BB979F /* Pods-LocoTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocoTutorial.release.xcconfig"; path = "Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		D62DB1BF20CFD703000BECCF /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		D62DB1C020CFD703000BECCF /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		D62DB1C320D0C1D0000BECCF /* baseline_home_black_18dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_home_black_18dp.png; sourceTree = "<group>"; };
@@ -51,26 +51,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B980D5FFC402CE605167593 /* Pods_LocoTutorial.framework in Frameworks */,
+				3F8B681FC12AF80F94734692 /* Pods_LocoTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		64842CA813331BE5002FBE14 /* Frameworks */ = {
+		2868B99E66AB65A9C7E91A47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1935358E4C1C9E4BF0FFCA62 /* Pods_LocoTutorial.framework */,
+				320A8D542CACFBF70EA2DDDA /* Pods_LocoTutorial.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		983A03CDC2AF16B3BBD76E9D /* Pods */ = {
+		BC7914DCD6315594128CE6B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				594C07A343AD0B0079F35302 /* Pods-LocoTutorial.debug.xcconfig */,
-				73E5418A3657026B6D8F9B39 /* Pods-LocoTutorial.release.xcconfig */,
+				49D511138B6EE15893B69103 /* Pods-LocoTutorial.debug.xcconfig */,
+				90333F9B86E2FE52D7BB979F /* Pods-LocoTutorial.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -91,8 +91,8 @@
 			children = (
 				D6C634B120CF7B060030D8F5 /* LocoTutorial */,
 				D6C634B020CF7B060030D8F5 /* Products */,
-				983A03CDC2AF16B3BBD76E9D /* Pods */,
-				64842CA813331BE5002FBE14 /* Frameworks */,
+				BC7914DCD6315594128CE6B5 /* Pods */,
+				2868B99E66AB65A9C7E91A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,11 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6C634C520CF7B070030D8F5 /* Build configuration list for PBXNativeTarget "LocoTutorial" */;
 			buildPhases = (
-				7DD08ACC2AB9C8E40DAECF98 /* [CP] Check Pods Manifest.lock */,
+				81ECBF1E6BC853421FDEDFD0 /* [CP] Check Pods Manifest.lock */,
 				D6C634AB20CF7B060030D8F5 /* Sources */,
 				D6C634AC20CF7B060030D8F5 /* Frameworks */,
 				D6C634AD20CF7B060030D8F5 /* Resources */,
-				DB00997E12A95851FDF7350C /* [CP] Embed Pods Frameworks */,
+				1A0043B649318E999F7DCB44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,7 +198,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7DD08ACC2AB9C8E40DAECF98 /* [CP] Check Pods Manifest.lock */ = {
+		1A0043B649318E999F7DCB44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81ECBF1E6BC853421FDEDFD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,23 +235,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB00997E12A95851FDF7350C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocoTutorial/Pods-LocoTutorial-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,7 +386,7 @@
 		};
 		D6C634C620CF7B070030D8F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 594C07A343AD0B0079F35302 /* Pods-LocoTutorial.debug.xcconfig */;
+			baseConfigurationReference = 49D511138B6EE15893B69103 /* Pods-LocoTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -404,7 +404,7 @@
 		};
 		D6C634C720CF7B070030D8F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73E5418A3657026B6D8F9B39 /* Pods-LocoTutorial.release.xcconfig */;
+			baseConfigurationReference = 90333F9B86E2FE52D7BB979F /* Pods-LocoTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
